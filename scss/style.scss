@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +18,75 @@ body{
 }
 
 .app{
-    width: 500px;
-    height: 500px;
-    background-color: #f5f8f9;
+    width: 475px;
+    height: 475px;
+    background-color: #fff;
+    color: #fff;
+    
+    .top{
+        display: flex;
+        gap: 50px;
+        height: 247px;
+        padding: 10px 0 0 15px;
+    }
+
+    .city-title{
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .descriptions{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 24px;
+        .icon{
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    .temprature{
+        font-size: 24px;
+    }
+
+    .time{
+        padding: 10px 50px;
+        font-size: 48px;
+    }
+
+    .bottom{
+        color: black;
+        padding: 20px 0 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+
+.section-block{
+    display: flex;
+    align-items: center;
+}
+
+.morning{
+    background-image: url(../img/time/morningTime.png);
+    color: #298DFF;
+}
+.day{
+    background-image: url(../img/time/dayTime.png);  
+}
+.evening{
+    background-image: url(../img/time/eveningTime.png);
+}
+.night{
+    background-image: url(../img/time/nightTime.png);
 }
