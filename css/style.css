@@ -31,6 +31,10 @@ body {
   padding: 10px 0 0 15px;
 }
 
+.app .left {
+  padding: 15px 0 0 30px;
+}
+
 .app .city-title {
   font-size: 36px;
   font-weight: 700;
@@ -51,11 +55,12 @@ body {
 }
 
 .app .temprature {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .app .time {
   padding: 20px;
+  padding-left: 80px;
   font-size: 48px;
 }
 
@@ -75,6 +80,7 @@ body {
 .section-block {
   display: flex;
   align-items: center;
+  font-size: 24px;
 }
 
 .morning {
