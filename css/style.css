@@ -25,10 +25,12 @@ body {
 }
 
 .app .top {
+  height: 247px;
+}
+
+.app .inner {
   display: flex;
   gap: 50px;
-  height: 247px;
-  padding: 10px 0 0 15px;
 }
 
 .app .left {
@@ -77,6 +79,11 @@ body {
   width: 50px;
 }
 
+.app .daytime {
+  margin-top: 35px;
+  font-size: 26px;
+}
+
 .section-block {
   display: flex;
   align-items: center;
@@ -98,5 +105,9 @@ body {
 
 .night {
   background-image: url(../img/time/nightTime.png);
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

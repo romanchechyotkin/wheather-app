@@ -1,15 +1,16 @@
 let store = {
-    city: 'Minsk',
+    city: `Minsk`,
     humidity: 0,
     pressure: 0,
     temperature: 0,
     visibility: 0,
-    weather_descriptions: '',
+    description: '',
 }
 
 const weatherLink = `https://api.openweathermap.org/data/2.5/weather?q=${store.city}&appid=c56a5d8b64c3562162d45f98a120efa8`
 const timeLink = 'http://worldtimeapi.org/api/timezone/Europe/'
 const root = document.querySelector('.app')
+
 
 const fetchData = async () => {
     const weatherResult = await fetch(weatherLink)
@@ -25,7 +26,7 @@ const fetchData = async () => {
         main: {
             humidity,
             pressure,
-            temp,
+            temp
         }
     } = weatherData
 
@@ -39,7 +40,7 @@ const fetchData = async () => {
         pressure,
         temp,
         visibility,
-        dateTime    
+        dateTime
     }
 
     render()
@@ -56,18 +57,17 @@ const markup = () => {
         visibility,
     } = store
 
-    return `
+    return ` 
             <div class="top ${getBg(cutTime(dateTime))}">
-                <div class="left">
-                    <div class="city-title">${city}</div>
-                    <div class="descriptions">
-                        <img class="icon" src="rain.jpg" alt="icon">
-                        
+                <div class='inner'>
+                    <div class="left">
+                        <div class="city-title">${city}</div>
+                        <div class="temprature">${translateTemp(temp)}°C</div>
+                        <div class='daytime'>${getBg(dateTime)}</div>
                     </div>
-                    <div class="temprature">${translateTemp(temp)}°C</div>
-                </div>
-                <div class="right">
-                    <div class="time">${cutTime(dateTime)}</div>
+                    <div class="right">
+                        <div class="time">${cutTime(dateTime)}</div>
+                    </div>
                 </div>
             </div>
 
@@ -75,20 +75,21 @@ const markup = () => {
                 <div class="humidity section-block">
                     <img class="humidity-icon" src="rain.jpg" alt="icon">
                     humidity
-                    ${humidity}
+                    ${humidity} %
                 </div>
                 <div class="pressure section-block">
                     <img class="pressure-icon" src="rain.jpg" alt="icon">
                     pressure
-                    ${pressure}
+                    ${pressure} hPa
                 </div>
                 <div class="visibility section-block">
                     <img class="visibility-icon" src="rain.jpg" alt="icon">
                     visibility
-                    ${visibility}
+                    ${visibility} meter
                 </div>
             </div>`
 }
+
 
 const render = () => {
     root.innerHTML = markup()

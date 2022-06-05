@@ -17,23 +17,22 @@ body{
     background-color: #6fadfe;
 }
 
+
 .app{
     width: 475px;
     height: 475px;
     background-color: #fff;
     color: #fff;
-    
     .top{
+        height: 247px;
+    }
+    .inner{
         display: flex;
         gap: 50px;
-        height: 247px;
-        padding: 10px 0 0 15px;
     }
-
     .left{
         padding: 15px 0 0 30px;
     }
-
     .city-title{
         font-size: 36px;
         font-weight: 700;
@@ -74,6 +73,10 @@ body{
             width: 50px;
         }
     }
+    .daytime{
+        margin-top: 35px;
+        font-size: 26px;
+    }
 }
 
 
@@ -95,4 +98,7 @@ body{
 }
 .night{
     background-image: url(../img/time/nightTime.png);
+}
+.hide{
+    display: none;
 }
